@@ -1,3 +1,22 @@
+/* цвет основного текста #212121; */
+/* вторичный цвет текста #757575; */
+/* белый цвет #FFFFFF;*/
+/* акцент #2196F3; */
+/* вторичный цвет фона #F5F4FA; */
+/* темный цвт фона #2F303A; */
+
+:root {
+    /* test colors */
+    --accent-cl: #2196F3;
+    --main-txt-cl: #757575;
+    --secondary-cl: #212121;
+    --wigte-cl: #FFFFFF;
+    /* bacground colors */
+    --main-bg-cl: #FFFFFF;
+    --secondary-bg-cl: #F5F4FA;
+    --dark-bg-cl: #2F303A;
+}
+
 body {
     background-color: #ffffff;
     color: #757575;
@@ -7,29 +26,51 @@ ul {
     list-style: none;
 }
 
-/* цвет основного текста #212121; */
-/* вторичный цвет текста #757575; */
-/* белый цвет #FFFFFF;*/
-/* акцент #2196F3; */
-/* вторичный цвет фона #F5F4FA; */
-/* темный цвт фона #2F303A; */
+/* header Шапка */
 
 .logo {
-    color: #2196F3;
+    color: var(--accent-cl);
 }
 
-/* site-nav */
+.logo-header {
+    color: #000000;
+}
+
+/* навигация */
 
 .site-nav .link {
-    color: #212121;
+    color: var(--secondary-cl);
 }
 
 .site-nav .link:hover, 
 .site-nav .link:focus {
-    color: #2196F3;
+    color: var(--accent-cl);
 }   
 
-.hero-section {
-    background-color: #2F303A;
-    color: #FFFFFF;
+/* почта телефон */
+
+.contact-link {
+    color: var(--main-txt-cl);
 }
+
+.contact-link:hover, 
+.contact-link:focus {
+    color: var(--accent-cl);
+}
+
+/* секция герой */
+
+.hero-section {
+    background-color: var(--dark-bg-cl);
+    color: var(--wigte-cl);
+}
+
+.hero-btn {
+    color: var(--wigte-cl);
+    background-color: var(--accent-cl);
+}
+
+/* секция особенности */
+
+
+
