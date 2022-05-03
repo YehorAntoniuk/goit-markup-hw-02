@@ -6,6 +6,8 @@
 /* темный цвт фона #2F303A; */
 
 :root {
+    --main-font: 'Roboto', sans-serif;
+    --secondary-font: 'Raleway', sans-serif;
     /* test colors */
     --accent-cl: #2196F3;
     --main-txt-cl: #757575;
@@ -15,9 +17,11 @@
     --main-bg-cl: #FFFFFF;
     --secondary-bg-cl: #F5F4FA;
     --dark-bg-cl: #2F303A;
+    --btn-hover-cl: #188CE8;
 }
 
 body {
+    font-family: var(--main-font);
     background-color: #ffffff;
     color: #757575;
 }
@@ -28,17 +32,45 @@ ul {
 
 /* header Шапка */
 
+.link,
+.contact-link {
+    text-decoration: none;
+}
+
 .logo {
+    font-family: var(--secondary-font);
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    
+    letter-spacing: 0.03em;
+   
     color: var(--accent-cl);
+    text-decoration: none;
 }
 
 .logo-header {
     color: #000000;
 }
 
+.hero-title {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+    
+    text-align: center;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    
+    color: var(--wigte-cl);
+}
+
 /* навигация */
 
 .site-nav .link {
+    text-decoration: none;
     color: var(--secondary-cl);
 }
 
@@ -70,7 +102,33 @@ ul {
     background-color: var(--accent-cl);
 }
 
+.hero-btn:hover {
+    background-color: var(--btn-hover-cl);
+}
+
 /* секция особенности */
 
+/* секция чем занимаемся */
 
+/* ссекция наша команда */
+.team {
+    background-color: var(--secondary-bg-cl);
+}
+
+/* подвал */
+.footer {
+    background-color: var(--dark-bg-cl);
+}
+
+.logo-footer {
+    color: var(--wigte-cl);
+}
+
+.address .link-map {
+    color: #ffffff;
+}
+
+.address .link {
+    color: #ffffff;
+}
 
