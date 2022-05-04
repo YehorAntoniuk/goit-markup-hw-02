@@ -13,6 +13,8 @@
     --main-txt-cl: #757575;
     --secondary-cl: #212121;
     --wigte-cl: #FFFFFF;
+    --logo-heafer-cl: #000000;
+    --address-link-cl: rgba(255, 255, 255, 0.6);
     /* bacground colors */
     --main-bg-cl: #FFFFFF;
     --secondary-bg-cl: #F5F4FA;
@@ -22,8 +24,12 @@
 
 body {
     font-family: var(--main-font);
-    background-color: #ffffff;
-    color: #757575;
+    font-size: 14px;
+    line-height: 1.71;
+    
+    letter-spacing: 0.03em;
+    
+    color: var(--main-txt-cl);
 }
 
 ul {
@@ -33,8 +39,15 @@ ul {
 /* header Шапка */
 
 .link,
-.contact-link {
+.contact-link,
+.site-nav .link {
     text-decoration: none;
+    color: currentColor;
+}
+
+.btn {
+    font-size: inherit;
+    cursor: pointer;
 }
 
 .logo {
@@ -50,32 +63,26 @@ ul {
 }
 
 .logo-header {
-    color: #000000;
-}
-
-.hero-title {
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 900;
-    font-size: 44px;
-    line-height: 1.36;
-    
-    text-align: center;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    
-    color: var(--wigte-cl);
+    color: var(--logo-heafer-cl);
 }
 
 /* навигация */
 
 .site-nav .link {
-    text-decoration: none;
     color: var(--secondary-cl);
+}
+.site-nav .link,
+.contact-link {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
 }
 
 .site-nav .link:hover, 
-.site-nav .link:focus {
+.site-nav .link:focus, 
+.contact-link:hover,
+.contact-link:focus {
     color: var(--accent-cl);
 }   
 
@@ -85,34 +92,106 @@ ul {
     color: var(--main-txt-cl);
 }
 
-.contact-link:hover, 
-.contact-link:focus {
-    color: var(--accent-cl);
-}
-
 /* секция герой */
 
 .hero-section {
     background-color: var(--dark-bg-cl);
+}
+
+.hero-title {
+    font-family: var(--main-font);
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+
+    text-align: center;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+
     color: var(--wigte-cl);
 }
 
 .hero-btn {
+    font-family: var(--main-font);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+
     color: var(--wigte-cl);
     background-color: var(--accent-cl);
 }
 
-.hero-btn:hover {
+.hero-btn:hover,
+.hero-btn:focus {
     background-color: var(--btn-hover-cl);
 }
 
 /* секция особенности */
+.benefits-title {
+    font-family: var(--main-font);
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    
+    color: var(--secondary-cl);
+}
 
 /* секция чем занимаемся */
+.work-title {
+    font-family: var(--main-font);
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+    letter-spacing: 0.03em;
+    
+    color: var(--secondary-cl);
+}
 
 /* ссекция наша команда */
 .team {
     background-color: var(--secondary-bg-cl);
+}
+
+.team-title {
+    font-family: var(--main-font);
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+    letter-spacing: 0.03em;
+    
+    color: var(--secondary-cl);
+}
+
+.team-subtitle {
+    font-family: var(--main-font);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.19;
+    
+    text-align: center;
+    letter-spacing: 0.03em;
+    
+    color: var(--secondary-cl);
+}
+
+.team-text {
+    font-family: var(--main-font);
+    font-size: 16px;
+    line-height: 1.19;
+    
+    text-align: center;
+    letter-spacing: 0.03em;
+    
+    color: var(--main-txt-cl);
 }
 
 /* подвал */
@@ -124,11 +203,29 @@ ul {
     color: var(--wigte-cl);
 }
 
-.address .link-map {
-    color: #ffffff;
-}
-
 .address .link {
-    color: #ffffff;
+font-family: var(--main-font);
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 24px;
+
+letter-spacing: 0.03em;
+
+color: var(--address-link-cl);
 }
 
+.address .link-map {
+    font-family: var(--main-font);
+    font-size: 14px;
+    line-height: 1.71;
+
+    letter-spacing: 0.03em;
+
+    color: var(--wigte-cl);
+}
+
+.address .link:hover,
+.address .link:focus {
+    color: var(--accent-cl);
+}
