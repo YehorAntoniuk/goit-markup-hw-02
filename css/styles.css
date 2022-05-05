@@ -36,9 +36,27 @@ ul {
     list-style: none;
 }
 
+.header-nav-link.active {
+    color: var(--accent-cl);
+}
+
+.visually-hidden {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+}
+
 /* header Шапка */
 
 .link,
+.header-nav-link,
 .contact-link,
 .site-nav .link {
     text-decoration: none;
@@ -68,10 +86,12 @@ ul {
 
 /* навигация */
 
-.site-nav .link {
+.site-nav .link,
+.header-nav-link {
     color: var(--secondary-cl);
 }
 .site-nav .link,
+.header-nav-link,
 .contact-link {
     font-weight: 500;
     font-size: 14px;
@@ -80,11 +100,14 @@ ul {
 }
 
 .site-nav .link:hover, 
-.site-nav .link:focus, 
+.site-nav .link:focus,
+.header-nav-link:hover,
+.header-nav-link:focus,
 .contact-link:hover,
 .contact-link:focus {
     color: var(--accent-cl);
-}   
+}
+   
 
 /* почта телефон */
 
@@ -141,6 +164,16 @@ ul {
     text-transform: uppercase;
     
     color: var(--secondary-cl);
+}
+
+.benefits-text {
+    font-family: var(--main-font);
+    font-size: 14px;
+    line-height: 1.71;
+    
+    letter-spacing: 0.03em;
+    
+    color: var(--main-txt-cl);
 }
 
 /* секция чем занимаемся */
@@ -228,4 +261,44 @@ color: var(--address-link-cl);
 .address .link:hover,
 .address .link:focus {
     color: var(--accent-cl);
+}
+
+/* секция портфолио */
+.gallery-btn {
+    font-family: var(--main-font);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.62;
+    
+    text-align: center;
+    letter-spacing: 0.03em;
+    
+    color: var(--secondary-cl);
+}
+
+.gallery-btn:hover,
+.gallery-btn:focus {
+    background-color: var(--btn-hover-cl);
+    color: var(--wigte-cl);
+}
+
+.gallery-title {
+    font-family: var(--main-font);
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    
+    letter-spacing: 0.06em;
+    
+    color: var(--secondary-cl);
+}
+
+.gallery-text {
+    font-family: var(--main-font);
+    font-size: 16px;
+    line-height: 1.88;
+    
+    letter-spacing: 0.03em;
+    
+    color: var(--main-txt-cl);
 }
